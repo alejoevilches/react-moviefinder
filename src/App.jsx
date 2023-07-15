@@ -1,5 +1,5 @@
 import './App.css'
-import withResults from "./mocks/with-results.json"
+import { Movies } from './components/Movies';
 import withoutResults from "./mocks/no-results.json"
 
 
@@ -17,19 +17,7 @@ function App() {
         </form>
       </header>
       <main>
-       {
-        hasMovies ? (
-          movies.map((movie)=>{
-            return (<li key={movie}>
-              <h3>{movie.Title}</h3>
-              <p>{movie.Year}</p>
-              <img src={movie.Poster} alt={movie.Title} />
-            </li>)
-          })
-        ) : (
-          <h1>No se encontraron resultados. Proba buscar nuevamente</h1>
-        )
-       }
+        <Movies />
       </main>
     </div>
   )
