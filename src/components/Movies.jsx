@@ -1,15 +1,13 @@
 /* eslint-disable react/prop-types */
-import withResults from "../mocks/with-results.json"
-
 export const ListOfMovies = ( {movies} )=>{
     return (
         <ul>
               {
                 movies.map(movie=>{
-                  return <li key={movie.imdbID}>
-                    <h3>{movie.Title}</h3>
-                    <p>{movie.Year}</p>
-                    <img src={movie.Poster} alt={movie.Title} />
+                  return <li key={movie.id}>
+                    <h3>{movie.title}</h3>
+                    <p>{movie.year}</p>
+                    <img src={movie.poster} alt={movie.title} />
                   </li>
                 })
               }
@@ -23,8 +21,7 @@ export const RenderNoResults=()=>{
     )
 }
 
-export const Movies=()=>{
-    const movies=withResults.Search;
+export const Movies=({movies})=>{
     const hasMovies=movies?.length > 0
   return (
     hasMovies
