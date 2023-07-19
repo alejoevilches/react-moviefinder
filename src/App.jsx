@@ -1,11 +1,7 @@
 import './App.css'
-import { Movies } from './components/Movies';
-import withoutResults from "./mocks/no-results.json"
-
+import { Movies } from './components/Movies'
 
 function App() {
-  const movies=withResults.Search;
-  const hasMovies=movies?.length > 0
   return (
     <div className='page'>
       <h1>Buscador de peliculas</h1>
