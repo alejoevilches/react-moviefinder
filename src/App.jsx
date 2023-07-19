@@ -4,6 +4,7 @@ import { useMovies } from './hooks/useMovies';
 
 function App() {
   const {movies:mappedMovies}=useMovies();
+  console.log(useMovies())
   return (
     <div className='page'>
       <h1>Buscador de peliculas</h1>
