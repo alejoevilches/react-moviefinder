@@ -46,6 +46,10 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+main{
+  width:100%;
+}
+
 button {
   transition:
     background-color 0.1s linear,
@@ -883,4 +887,27 @@ body > footer {
     color: #00f;
     text-decoration: underline;
   }
+}
+
+.page{
+  width:100%;
+  max-width:800px;
+}
+
+.movies{
+  display:grid;
+  width:100%;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap:10px;
+  list-style: none;
+  text-align: center;
+}
+
+.movies h3, .movies p{
+  margin:0;
+  padding:0;
+}
+
+.movies img{
+  border-radius:8px;
 }

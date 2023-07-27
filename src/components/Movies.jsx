@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 export const ListOfMovies = ( {movies} )=>{
     return (
-        <ul>
+        <ul className="movies">
               {
                 movies.map(movie=>{
                   return <li key={movie.id}>

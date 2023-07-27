@@ -6,11 +6,11 @@ import { useMovies } from './hooks/useMovies';
 
 
 function App() {
-  const {movies:mappedMovies}=useMovies();
   const {search, updateSearch, error} = useSearch();
+  const {movies, getMovies}=useMovies({search});
   const handleSubmit=(e)=>{
     e.preventDefault();
-    console.log({search})
+    getMovies();
     }
   const handleChange=(e)=>{
     updateSearch(e.target.value);
@@ -27,7 +27,7 @@ function App() {
         {error && <p style={{ color: 'red' }}>{error}</p>}
       </header>
       <main>
-        <Movies movies={mappedMovies}/>
+        <Movies movies={movies}/>
       </main>
     </div>
   )
