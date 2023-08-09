@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 export function useSearch(){
   const [search, updateSearch]=useState("");
   const [error, setError]=useState(null);
-  const isFirstSearch=useRef(true)
+  const isFirstSearch=useRef(true);
 
   useEffect(() => {
     if (isFirstSearch.current){
