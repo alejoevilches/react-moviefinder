@@ -4,12 +4,15 @@ import { useState, useRef, useMemo } from "react";
 export const useMovies=({search, sort})=>{
   const [movies, setMovies]=useState([])
   const previousSearch=useRef(search)
-  const getMovies=async()=>{
+  const getMovies=useMemo(()=>{
+    return async(search)=>{
+    console.log("getMovies")
     if (search===previousSearch.current) return
     previousSearch.current=search; 
     const newMovies=await searchMovies({search})
     setMovies(newMovies)
   }
+  }, [])
 
   const sortedMovies = useMemo(()=>{
     return sort 

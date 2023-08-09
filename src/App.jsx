@@ -12,7 +12,7 @@ function App() {
   const {movies, getMovies}=useMovies({search, sort});
   const handleSubmit=(e)=>{
     e.preventDefault();
-    getMovies();
+    getMovies(search);
     }
   const handleSort=()=>{
     setSort(!sort)
@@ -20,6 +20,7 @@ function App() {
   const handleChange=(e)=>{
     updateSearch(e.target.value);
   }
+
   return (
     <div className='page'>
       <h1>Buscador de peliculas</h1>
