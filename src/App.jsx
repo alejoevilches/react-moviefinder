@@ -35,8 +35,10 @@ function App() {
       <header>
         <form className='form' onSubmit={handleSubmit}>
           <label htmlFor="movie-name">¿Que pelicula querés buscar?</label>
-          <input value={search} onChange={handleChange} name="query" type="text" id="movie-name" placeholder='Licorice Pizza, Everything Everywhere All At Once...' />
-          <input type="checkbox" onChange={handleSort} checked={sort} />
+          <div className='inputs'>
+            <input value={search} onChange={handleChange} name="query" type="text" id="movie-name" placeholder='Licorice Pizza, Everything Everywhere All At Once...' />
+            <input type="checkbox" onChange={handleSort} checked={sort} />
+          </div>
           <button type='submit'>Buscar</button>
         </form>
         {error && <p style={{ color: 'red' }}>{error}</p>}

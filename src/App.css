@@ -17,3 +17,9 @@ form{
     justify-content: center;
     align-items: center;
 }
+
+.inputs{
+    display:inherit;
+    flex-direction: row;
+    align-items: center;
+}
